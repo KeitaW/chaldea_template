@@ -1,0 +1,6 @@
+export ACTIVATE="$PYENV_ROOT/versions/anaconda3-5.0.0/bin/activate"
+export DEACTIVATE="$PYENV_ROOT/versions/anaconda3-5.0.0/bin/deactivate"
+export ORGPATH=$PATH
+export PATH=$PATH:"$HOME/Projects/Chaldea/bin"
+source $ACTIVATE crcns-hc-14
+
