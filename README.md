@@ -1,7 +1,6 @@
-CRCNS-HC-14
+Template for sequential activity detection analysis with Chaleda  
 ==============================
 
-Amygdala data analysis with Chaldea
 
 Project Organization
 ------------
