@@ -1,7 +1,13 @@
+# https://stackoverflow.com/questions/3572030/bash-script-absolute-path-with-osx
+# as usual SCRIPT_DIR=$(cd $(dirname $0); pwd) not working correctly in OSX (it contains PROMPT for some reason...)
+realpath() {
+    [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
+}
+
+export PROJECTPATH=$(dirname $(realpath "$0"))
 export ACTIVATE="$PYENV_ROOT/versions/anaconda3-5.0.0/bin/activate"
 export DEACTIVATE="$PYENV_ROOT/versions/anaconda3-5.0.0/bin/deactivate"
 export ORGPATH=$PATH
-export PROJECTPATH="$HOME/Projects/crcns-hc-14"
 export CHALDEA="$HOME/Projects/Chaldea"
 export CHALDEAUTILS="$HOME/Projects/Chaldea/chaldea/utils"
 export PYTHONPATH="${PYTHONPATH}:${CHALDEAUTILS}"
